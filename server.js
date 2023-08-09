@@ -5,17 +5,29 @@ const db = mysql.createConnection(
   {
     host: 'localhost',
     // MySQL username,
-    user: 'root',
-    // TODO: Add MySQL password here
-    password: '',
-    database: 'movies_db'
+    user: process.env.DB_USER,
+  
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
   },
-  console.log(`Connected to the movies_db database.`)
+  console.log(`Connected to the employee_db database.`)
 );
 const innit = ()=>{
   inquirer.prompt([
     {
       type: "list",
+      name: "choices",
+      message: "What would you like to do?",
+      choices: [
+        "View all Employees",
+        "Add Employee",
+        "Update Employee Role",
+        "View All Roles",
+        "Add Role",
+        "View All Department",
+        "Add Department",
+        "Quit"
+      ],
 
     }
   ]).then(answers => {
