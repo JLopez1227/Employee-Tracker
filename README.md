@@ -10,4 +10,4 @@ To use this application you'll first want to clone my GitHub Repository to your 
 
 ## Tutorial Video
 The following video demonstrates how to properly use this application, while also showcasing it's functionality. 
-[Employee Tracker Walkthrough Video](https://drive.google.com/file/d/1mIpV314qJ11UJcqK3zFczCp_OJiDbbcH/view)
+[Employee Tracker Walkthrough Video](https://drive.google.com/file/d/1mzNQQGuhCW1QWWmYVX7yLTcv5VtHIX1a/view)
