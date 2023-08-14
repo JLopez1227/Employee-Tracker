@@ -3,6 +3,12 @@ const inquirer = require('inquirer');
 const { displayDepartment, viewRoles, viewEmployees} = require('./queries/view-query');
 const { addDepartment, addRole, addEmployee} = require('./queries/add-query');
 // Connect to database
+function quit(){
+  console.log('Quitting the server. Bye!');
+  db.end();
+  process.exit();
+}
+
 function prompt() {
   inquirer.prompt([
     {
@@ -32,27 +38,21 @@ function prompt() {
       case "View All Employees":
         viewEmployees();
         break;
+        case "Add Department":
+          addDepartment();
+          break;
+        case "Add Role":
+          addRole();
+          break;
+        case "Add Employee":
+          addEmployee();
+          break;
+        case "Quit":
+          quit();
     }
     setTimeout(()=> {
       prompt()
-    }, 11000)
+    }, 22000)
   })
-//   .then (answers => {
-//     switch (answers.choices){
-//       case "Add Department":
-//         addDepartment();
-//         break;
-//       case "Add Role":
-//         addRole();
-//         break;
-//       case "Add Employee":
-//         addEmployee();
-//         break;
-//     }
-//     setTimeout(()=> {
-//       prompt()
-//     }, 11000)
-//   })
-// }
 }
 prompt();

@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const db = require("../db/connection");
 const cTable = require("console.table");
 
-function addDeptarment() {
+function addDepartment() {
   inquirer
     .prompt([
       {
@@ -156,4 +156,4 @@ function addEmployee() {
   });
 }
 
-module.exports = { addDeptarment, addRole, addEmployee };
+module.exports = { addDepartment, addRole, addEmployee };
